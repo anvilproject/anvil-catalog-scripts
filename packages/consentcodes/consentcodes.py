@@ -27,25 +27,15 @@ disease_code_tree = make_disease_code_tree()
 
 consent_symbol_defs_list = [
 	{"name": "NRES", "class": "primary", "param": "none", "short": "No restrictions", "long": "No restrictions on data use."},
-	{"name": "GRU", "class": "primary", "param": "none", "short": "General research use and clinical care", "long": "For health/medical/biomedical purposes, including the study of population origins or ancestry."},
+	{"name": "GRU", "class": "primary", "param": "none", "short": "General research use and clinical care", "long": "Use of the data is limited only by the terms of the Data Use Certification."},
 	{"name": "HMB", "class": "primary", "param": "none", "short": "Health/medical/biomedical research and clinical care", "long": "Use of the data is limited to health/medical/biomedical purposes; does not include the study of population origins or ancestry."},
 	{"name": "DS", "class": "primary", "param": "required", "short": "Disease-specific research and clinical care", "long_with_param": "Use of the data must be related to []."},
-	{"name": "POA", "class": "primary", "param": "none", "short": "Population origins/ancestry research", "long": "Use of the data is limited to the study of population origins or ancestry."},
-	{"name": "RS", "class": "secondary", "param": "required", "short": "Other research-specific restrictions", "long_with_param": "Use of the data is limited to studies of research type \"[]\"."},
-	{"name": "RUO", "class": "secondary", "param": "none", "short": "Research use only", "long": "Use of data is limited to research purposes (e.g., does not include its use in clinical care)."},
-	{"name": "NMDS", "class": "secondary", "param": "none", "short": "No \"general methods\" research", "long": "Use of the data includes methods development research (e.g., development of software or algorithms) ONLY within the bounds of other data use limitations."},
-	{"name": "GSO", "class": "secondary", "param": "none", "short": "Genetic studies only", "long": "Use of the data is limited to genetic studies only (i.e., no \"phenotype-only\" research)."},
-	{"name": "NPU", "class": "secondary", "param": "none", "short": "Not-for-profit use only", "long": "Use of the data is limited to not-for-profit organizations."},
-	{"name": "PUB", "class": "secondary", "param": "none", "short": "Publication required", "long": "Requestor agrees to make results of studies using the data available to the larger scientific community."},
-	{"name": "COL", "class": "secondary", "param": "none", "short": "Collaboration required", "long": "Requestor must agree to collaboration with the primary study investigator(s)."},
-	{"name": "IRB", "class": "secondary", "param": "none", "short": "Ethics approval required", "long": "Requestor must provide documentation of local IRB/REC approval."},
-	{"name": "GS", "class": "secondary", "param": "required", "short": "Geographical restrictions", "long_with_param": "Use of the data is limited to within geographic region \"[]\"."},
-	{"name": "MOR", "class": "secondary", "param": "required", "short": "Publication moratorium/embargo", "long_with_param": "Requestor agrees not to publish results of studies until the date []."},
-	{"name": "TS", "class": "secondary", "param": "required", "short": "Time limits on use", "long_with_param": "Use of data is approved for [] months."},
-	{"name": "US", "class": "secondary", "param": "none", "short": "User-specific restrictions", "long": "Use of data is limited to use by approved users."},
-	{"name": "PS", "class": "secondary", "param": "none", "short": "Project-specific restrictions", "long": "Use of data is limited to use within an approved project."},
-	{"name": "IS", "class": "secondary", "param": "none", "short": "Institution-specific restrictions", "long": "Use of data is limited to use within an approved institution."},
-	{"name": "MDS", "class": "secondary", "param": "none", "short": "", "long": "Use of the data includes methods development research (e.g., development of software or algorithms)"},
+	{"name": "GSO", "class": "secondary", "param": "none", "long": "Use of the data is limited to genetic studies only."},
+	{"name": "NPU", "class": "secondary", "param": "none", "long": "Use of the data is limited to not-for-profit organizations."},
+	{"name": "PUB", "class": "secondary", "param": "none", "long": "Requestor agrees to make results of studies using the data available to the larger scientific community."},
+	{"name": "COL", "class": "secondary", "param": "none", "long": "Requestor must provide a letter of collaboration with the primary study investigator(s)."},
+	{"name": "IRB", "class": "secondary", "param": "none", "long": "Requesting institution's IRB or equivalent body must approve the requested use."},
+	{"name": "MDS", "class": "secondary", "param": "none", "long": "The dataset can be used for methods research and development (e.g., development of statistical software or algorithms)."},
 ]
 
 # Convert symbol definitions to dict indexed by symbol name
