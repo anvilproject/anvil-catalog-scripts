@@ -7,7 +7,7 @@ def make_disease_code_tree():
 	# Each node has a "value" entry and/or a "children" entry
 	# The value stores the full name of the disease that's identified by the node's path in the tree
 	# The children represent all disease abbreviations that have the node's path as a prefix
-	source_path = Path(__file__, "disease_abbrev_mapping.tsv")
+	source_path = Path(__file__).parent / "disease_abbrev_mapping.tsv"
 	df = pd.read_csv(source_path, sep="\t", header=0, keep_default_na=False)
 	tree = {}
 	node = None
